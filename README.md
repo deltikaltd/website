@@ -11,7 +11,7 @@ Static company site built with HTML and CSS. No build step and no JavaScript.
 - `css/styles.css` — shared layout and responsive styles
 - `images/logo.svg` — wordmark symbol
 
-Copy and the `hello@deltika.com` address are a first draft. Replace them with the real company text and inbox before sharing the site widely.
+Brand colours, Montserrat type, and logo follow the Deltika visual identity. Company address and KVK number come from [deltika.com](https://deltika.com/). Product details stay off the public site until launch.
 
 ## Preview locally
 
