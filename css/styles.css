@@ -11,8 +11,8 @@
   --paper-2: #e8f1f6;
   --white: #ffffff;
   --line: rgba(11, 42, 74, 0.12);
-  --max: 1120px;
-  --header-h: 6.4rem;
+  --max: 82rem;
+  --header-h: 4.4rem;
   --shadow: 0 16px 40px rgba(7, 30, 54, 0.12);
 }
 
@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -138,6 +139,7 @@ p:last-child {
 }
 
 .header-inner {
+  height: var(--header-h);
   min-height: var(--header-h);
   display: flex;
   align-items: center;
@@ -149,18 +151,25 @@ p:last-child {
 .brand {
   display: flex;
   align-items: center;
-  color: var(--navy);
+  flex: 0 0 auto;
+  gap: 0.85rem;
   text-decoration: none;
 }
 
-.brand:hover {
-  color: var(--navy);
+.brand-mark,
+.brand-word {
+  flex-shrink: 0;
+  max-width: none;
 }
 
-.brand img {
-  height: 4.5rem;
+.brand-mark {
+  height: 2.9rem;
   width: auto;
-  max-width: min(78vw, 22rem);
+}
+
+.brand-word {
+  height: 1.22rem;
+  width: auto;
 }
 
 .nav-toggle {
@@ -201,6 +210,10 @@ p:last-child {
   width: 1.15rem;
   height: 2px;
   background: var(--navy);
+}
+
+.site-nav {
+  flex: 0 0 auto;
 }
 
 .site-nav ul {
@@ -679,8 +692,12 @@ address {
 }
 
 @media (max-width: 719px) {
-  .brand img {
-    height: 3.15rem;
+  .brand-mark {
+    height: 2.25rem;
+  }
+
+  .brand-word {
+    height: 0.95rem;
   }
 
   .nav-toggle-label {
