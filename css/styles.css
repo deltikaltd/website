@@ -11,7 +11,7 @@
   --paper-2: #e8f1f6;
   --white: #ffffff;
   --line: rgba(11, 42, 74, 0.12);
-  --max: 82rem;
+  --max: 90rem;
   --header-h: 4.4rem;
   --shadow: 0 16px 40px rgba(7, 30, 54, 0.12);
 }
@@ -431,7 +431,7 @@ main {
 
 .hero-copy p.lead {
   font-size: 1.05rem;
-  max-width: 38rem;
+  max-width: 44rem;
 }
 
 .hero-visual {
@@ -454,7 +454,7 @@ main {
 }
 
 .section-head {
-  max-width: 40rem;
+  max-width: 56rem;
   margin-bottom: 1.75rem;
 }
 
@@ -484,7 +484,56 @@ main {
 
 .team-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.2rem;
+}
+
+.team-link {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.arch-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.arch-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.arch-card {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.arch-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.arch-card figcaption {
+  padding: 0.85rem 1.1rem 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.arch-quote {
+  padding: 1.7rem 1.75rem 1.9rem;
+}
+
+.arch-quote h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
 }
 
 .feature-list {
@@ -595,7 +644,7 @@ main {
 }
 
 .page-hero p {
-  max-width: 42rem;
+  max-width: 52rem;
   font-size: 1.05rem;
 }
 
@@ -606,11 +655,11 @@ main {
 }
 
 .prose {
-  max-width: 42rem;
+  max-width: 52rem;
 }
 
 .home-prose {
-  max-width: 46rem;
+  max-width: 56rem;
 }
 
 .home-prose p {
@@ -805,6 +854,39 @@ address {
   .team-grid,
   .timeline {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .arch-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .arch-stack {
+    height: 0;
+    min-height: 100%;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .arch-card-cube img {
+    width: 100%;
+    height: auto;
+  }
+
+  .arch-quote {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .arch-stack .arch-card:last-child {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .arch-stack .arch-card:last-child img {
+    flex: 1;
+    min-height: 0;
+    object-fit: contain;
   }
 }
 
