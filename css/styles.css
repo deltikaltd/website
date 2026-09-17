@@ -143,7 +143,7 @@ p:last-child {
   min-height: var(--header-h);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
   position: relative;
 }
@@ -214,6 +214,110 @@ p:last-child {
 
 .site-nav {
   flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.lang-switch {
+  position: relative;
+  flex: 0 0 auto;
+  z-index: 30;
+}
+
+.lang-switch summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  min-height: 2.35rem;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: var(--white);
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.lang-switch summary::-webkit-details-marker,
+.lang-switch summary::marker {
+  display: none;
+  content: "";
+}
+
+.lang-switch summary::after {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  border-right: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  margin-left: 0.1rem;
+}
+
+.lang-switch[open] summary::after {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+.lang-flag {
+  width: 1.15rem;
+  height: 0.78rem;
+  max-width: none;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(11, 42, 74, 0.12);
+}
+
+.lang-switch ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  min-width: 12.5rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+.lang-switch a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.55rem;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lang-switch a:hover {
+  background: var(--paper);
+  color: var(--navy);
+}
+
+.lang-code {
+  letter-spacing: 0.04em;
+  min-width: 1.55rem;
+}
+
+.lang-name {
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.lang-switch a.is-active::after {
+  content: "✓";
+  margin-left: auto;
+  color: var(--cyan-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .site-nav ul {
@@ -702,6 +806,12 @@ address {
 
   .nav-toggle-label {
     display: flex;
+    order: 3;
+  }
+
+  .lang-switch {
+    order: 2;
+    margin-left: auto;
   }
 
   .site-nav {
@@ -711,6 +821,7 @@ address {
     left: 0;
     right: 0;
     z-index: 25;
+    margin-left: 0;
     background: var(--paper);
     border-bottom: 1px solid var(--line);
     padding: 0.5rem 1rem 1rem;
