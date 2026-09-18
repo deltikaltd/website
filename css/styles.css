@@ -235,122 +235,6 @@ p:last-child {
   margin-left: auto;
 }
 
-.lang-switch {
-  position: relative;
-  flex: 0 0 auto;
-  align-self: center;
-  z-index: 30;
-}
-
-.lang-switch summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-  min-height: 2.35rem;
-  padding: 0.3rem 0.55rem;
-  border: 1px solid var(--line);
-  border-radius: 0.35rem;
-  background: var(--white);
-  color: var(--navy);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-
-.lang-switch summary::-webkit-details-marker,
-.lang-switch summary::marker {
-  display: none;
-  content: "";
-}
-
-.lang-switch summary::after {
-  content: "";
-  width: 0.38rem;
-  height: 0.38rem;
-  border-right: 1.8px solid currentColor;
-  border-bottom: 1.8px solid currentColor;
-  transform: rotate(45deg) translateY(-1px);
-  margin-left: 0.1rem;
-}
-
-.lang-switch[open] summary::after {
-  transform: rotate(-135deg) translateY(-1px);
-}
-
-.lang-flag {
-  display: block;
-  width: 18px;
-  height: 12px;
-  max-width: none;
-  flex-shrink: 0;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: inset 0 0 0 1px rgba(11, 42, 74, 0.12);
-}
-
-.lang-switch ul {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 0.4rem);
-  width: 14.5rem;
-  margin: 0;
-  padding: 0.4rem;
-  list-style: none;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
-  box-shadow: var(--shadow);
-}
-
-.lang-switch li {
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.lang-switch a {
-  display: grid;
-  grid-template-columns: 18px 1.7rem minmax(0, 1fr) 1rem;
-  align-items: center;
-  column-gap: 0.5rem;
-  width: 100%;
-  padding: 0.5rem 0.55rem;
-  border-radius: 0.35rem;
-  text-decoration: none;
-  color: var(--navy);
-  font-size: 0.8rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.lang-switch a:hover {
-  background: var(--paper);
-  color: var(--navy);
-}
-
-.lang-code {
-  letter-spacing: 0.04em;
-}
-
-.lang-name {
-  font-weight: 600;
-  color: var(--ink-soft);
-  font-size: 0.78rem;
-}
-
-.lang-switch a.is-active::after {
-  content: "✓";
-  color: var(--cyan-dark);
-  font-size: 0.95rem;
-  font-weight: 800;
-  text-align: right;
-}
-
 .site-nav ul {
   display: flex;
   gap: 0.35rem 1.4rem;
@@ -907,9 +791,6 @@ address {
 
   .nav-toggle-label {
     display: flex;
-  }
-
-  .lang-switch {
     margin-left: auto;
   }
 
