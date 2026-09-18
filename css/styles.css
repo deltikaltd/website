@@ -726,6 +726,10 @@ address {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .contact-card-primary {
+    grid-column: 1 / -1;
+  }
+
   .split {
     grid-template-columns: 1.35fr 0.85fr;
     gap: 2.2rem;
