@@ -14,6 +14,10 @@
   --max: 90rem;
   --header-h: 4.4rem;
   --shadow: 0 16px 40px rgba(7, 30, 54, 0.12);
+  --jobs: #66a5ad;
+  --jobs-hover: #57969e;
+  --jobs-ink: #2d4a4e;
+  --jobs-paper: #e8f4f5;
 }
 
 *,
@@ -450,6 +454,19 @@ main {
   margin-bottom: 0.4rem;
 }
 
+.jobs-label {
+  color: var(--jobs);
+}
+
+.jobs-points {
+  margin: 0.85rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.jobs-points li {
+  margin: 0.4rem 0;
+}
+
 .hub {
   display: grid;
   gap: 1rem;
@@ -517,6 +534,107 @@ main {
 .band .btn-primary:hover {
   background: #5ad4e0;
   color: var(--navy-deep);
+}
+
+.launch-strip {
+  background: var(--jobs-paper);
+  color: var(--jobs-ink);
+}
+
+.launch-strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem 1.25rem;
+  padding: 0.85rem 0;
+}
+
+.launch-strip p {
+  margin: 0;
+  color: var(--jobs-ink);
+  font-size: 0.95rem;
+  max-width: 52rem;
+}
+
+.launch-strip strong {
+  color: var(--jobs-ink);
+  font-weight: 700;
+}
+
+.launch-strip a {
+  color: var(--jobs);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.launch-strip a:hover {
+  color: var(--jobs-ink);
+}
+
+.band-jobs {
+  background: var(--jobs-paper);
+}
+
+.band-jobs h2 {
+  color: var(--jobs-ink);
+}
+
+.band-jobs p {
+  color: rgba(45, 74, 78, 0.78);
+}
+
+.band-jobs .btn-primary {
+  background: var(--jobs);
+  color: #fff;
+}
+
+.band-jobs .btn-primary:hover {
+  background: var(--jobs-hover);
+  color: #fff;
+}
+
+.jobs-banner {
+  margin: 0 auto 2.2rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(102, 165, 173, 0.22);
+  box-shadow: var(--shadow);
+  background: #f4fafb;
+}
+
+.jobs-product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.jobs-product-mark {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 0.7rem;
+  flex-shrink: 0;
+}
+
+.jobs-product .eyebrow {
+  color: var(--jobs);
+}
+
+.btn-jobs {
+  background: var(--jobs);
+  color: #fff;
+}
+
+.btn-jobs:hover {
+  background: var(--jobs-hover);
+  color: #fff;
+}
+
+.jobs-banner img {
+  width: 100%;
+  height: auto;
 }
 
 /* Inner pages */
@@ -722,7 +840,8 @@ address {
   }
 
   .hub,
-  .contact-grid {
+  .contact-grid,
+  .notice-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -738,7 +857,6 @@ address {
   .feature-list,
   .pillar-grid,
   .service-grid,
-  .notice-grid,
   .team-grid,
   .timeline {
     grid-template-columns: repeat(3, 1fr);
