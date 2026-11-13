@@ -275,7 +275,9 @@ main {
   margin-top: 1.6rem;
 }
 
-.btn {
+.btn,
+a.btn:link,
+a.btn:visited {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -288,23 +290,30 @@ main {
   border: 1px solid transparent;
 }
 
-.btn-primary {
+.btn-primary,
+a.btn-primary:link,
+a.btn-primary:visited {
   background: var(--navy);
   color: var(--white);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+a.btn-primary:hover {
   background: #12375e;
   color: var(--white);
 }
 
-.btn-ghost {
+.btn-ghost,
+a.btn-ghost:link,
+a.btn-ghost:visited {
   background: var(--white);
   color: var(--navy);
   border-color: var(--line);
+  text-decoration: none;
 }
 
-.btn-ghost:hover {
+.btn-ghost:hover,
+a.btn-ghost:hover {
   border-color: var(--cyan);
   color: var(--navy);
 }
@@ -562,7 +571,9 @@ main {
   font-weight: 700;
 }
 
-.launch-strip a {
+.launch-strip a,
+.launch-strip a:link,
+.launch-strip a:visited {
   color: var(--jobs);
   font-weight: 700;
   text-decoration: none;
@@ -585,12 +596,16 @@ main {
   color: rgba(45, 74, 78, 0.78);
 }
 
-.band-jobs .btn-primary {
+.band-jobs .btn-primary,
+.band-jobs a.btn-primary:link,
+.band-jobs a.btn-primary:visited {
   background: var(--jobs);
   color: #fff;
+  text-decoration: none;
 }
 
-.band-jobs .btn-primary:hover {
+.band-jobs .btn-primary:hover,
+.band-jobs a.btn-primary:hover {
   background: var(--jobs-hover);
   color: #fff;
 }
@@ -622,12 +637,16 @@ main {
   color: var(--jobs);
 }
 
-.btn-jobs {
+.btn-jobs,
+a.btn-jobs:link,
+a.btn-jobs:visited {
   background: var(--jobs);
   color: #fff;
+  text-decoration: none;
 }
 
-.btn-jobs:hover {
+.btn-jobs:hover,
+a.btn-jobs:hover {
   background: var(--jobs-hover);
   color: #fff;
 }
